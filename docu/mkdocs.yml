@@ -1,0 +1,30 @@
+site_name: "Felix' Elemental Forces in Software Engineering"
+site_description: "This is how I do things"
+site_author: "Felix Roske"
+site_url: "http://www.felixroske.de/"
+
+theme:
+  name: "material"
+  palette:
+    primary: "teal"
+    accent: "teal"
+  feature:
+    tabs: true
+  favicon: 'assets/images/icons8-battelefied-16.png'
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      linenums: true
+  - footnotes
+  - meta
+
+extra:
+  social:
+    - type: "github"
+      link: "https://github.com/roskenet"
+    - type: "twitter"
+      link: "https://twitter.com/felixroske"
+    - type: "facebook"
+      link: "https://www.facebook.com/felix.roske"
+
