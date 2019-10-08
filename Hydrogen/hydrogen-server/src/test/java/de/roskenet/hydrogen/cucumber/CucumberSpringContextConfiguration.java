@@ -14,7 +14,7 @@ import de.roskenet.hydrogen.HydrogenApplication;
  * Class to use spring application context while running cucumber
  */
 @SpringBootTest // (webEnvironment = WebEnvironment.DEFINED_PORT)
-@ContextConfiguration(classes = HydrogenApplication.class, loader = SpringBootContextLoader.class)
+//@ContextConfiguration(classes = HydrogenApplication.class, loader = SpringBootContextLoader.class)
 public class CucumberSpringContextConfiguration {
 
   private static final Logger LOG = LoggerFactory.getLogger(CucumberSpringContextConfiguration.class);
