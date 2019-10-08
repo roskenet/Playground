@@ -9,7 +9,6 @@ public class TestDoSomethingStepDefs implements En {
 
     private int someDataStorage = 28;
     
-    
     public TestDoSomethingStepDefs() {
         Given("The hydrogen-server is running", () -> {
             // Write code here that turns the phrase above into concrete actions
@@ -22,7 +21,7 @@ public class TestDoSomethingStepDefs implements En {
             
         });
 
-        When("I perform GET on the endpoint", () -> {
+       And("I perform GET on the endpoint", () -> {
             // Write code here that turns the phrase above into concrete actions
             //            throw new cucumber.api.PendingException();
             

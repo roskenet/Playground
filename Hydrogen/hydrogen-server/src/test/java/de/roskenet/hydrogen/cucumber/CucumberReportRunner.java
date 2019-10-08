@@ -21,7 +21,7 @@ public class CucumberReportRunner extends Cucumber {
   private static final String BUILD_NUMBER = "1.0.0";
   private static final String BRANCH_NAME = "master";
 
-  public CucumberReportRunner(Class clazz) throws InitializationError {
+  public CucumberReportRunner(Class<?> clazz) throws InitializationError {
     super(clazz);
   }
 
