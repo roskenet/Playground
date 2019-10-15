@@ -7,5 +7,5 @@ Builds and installs a K8s webservice.
 Is a full example.
 
 ```bash
-echo $(minikube ip) " oxygen.playground"
+sudo echo $(minikube ip) " oxygen.playground" >> /etc/hosts
 ```
