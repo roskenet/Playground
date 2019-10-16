@@ -1,24 +1,15 @@
 package de.roskenet.hydrogen;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
-import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 public class HydrogenClientApplication implements CommandLineRunner {
-
-    @Bean
-    RestTemplate restTemplate() {
-        RestTemplate restTemplate = new RestTemplate();
-        MappingJackson2HttpMessageConverter converter = new MappingJackson2HttpMessageConverter();
-        converter.setObjectMapper(new ObjectMapper());
-        restTemplate.getMessageConverters().add(converter);
-        return restTemplate;
-    }
     
+    @Autowired
+    private WebServiceClient webServiceClient;
     
 	public static void main(String[] args) {
 		SpringApplication.run(HydrogenClientApplication.class, args);
@@ -27,7 +18,10 @@ public class HydrogenClientApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         
-        // Do something here!
+        System.out.println("Hello World! Let's call the service:");
+        String value = webServiceClient.getValue("Hallo");
+        
+        System.out.println("It answered: " + value);
     }
 
 }
