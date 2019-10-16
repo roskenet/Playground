@@ -1,19 +1,13 @@
 package de.zalando.hellospring;
 
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringHelloworldApplication implements CommandLineRunner {
+public class SpringHelloworldApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringHelloworldApplication.class, args);
 	}
-
-    @Override
-    public void run(String... args) throws Exception {
-       System.out.println("Hello World!"); 
-    }
 
 }
