@@ -19,6 +19,17 @@ markdown_extensions:
   - footnotes
   - meta
 
+nav:
+  - 'index.md'
+  - 'about.md'
+  - Elements:
+    - 'elements/Hydrogen.md'
+    - 'elements/Oxygen.md'
+  - Tools:
+    - 'tools/bash.md'
+    - 'tools/python.md'
+    - 'tools/minikube.md'
+
 extra:
   social:
     - type: "github"
