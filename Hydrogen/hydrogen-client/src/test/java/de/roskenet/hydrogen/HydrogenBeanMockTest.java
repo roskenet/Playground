@@ -6,23 +6,27 @@ import static org.junit.Assert.assertThat;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.test.context.junit4.SpringRunner;
 
-// Possibility 1:
-// We have the server application run locally
+// Possibility 2:
+// We mock the WebServiceClient bean here.
 @RunWith(SpringRunner.class)
-public class HydrogenWebServiceClientTest {
-
+public class HydrogenBeanMockTest {
+ 
     @Configuration
     public static class WebServiceClientConfig {
         
         @Bean
         public WebServiceClient webServiceClient() {
-            RestTemplateBuilder builder = new RestTemplateBuilder();
-            return new HydrogenWebServiceClient(builder);
+            return new WebServiceClient() {
+                
+                @Override
+                public String getValue(String param) {
+                    return "Felix";
+                }
+            };
         }
     }
     
@@ -36,3 +40,4 @@ public class HydrogenWebServiceClientTest {
     }
     
 }
+

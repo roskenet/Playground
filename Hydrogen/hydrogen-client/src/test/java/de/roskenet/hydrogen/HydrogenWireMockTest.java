@@ -7,14 +7,16 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.cloud.contract.wiremock.AutoConfigureWireMock;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
 
-// Possibility 1:
-// We have the server application run locally
 @RunWith(SpringRunner.class)
-public class HydrogenWebServiceClientTest {
+@AutoConfigureWireMock
+@TestPropertySource(properties = {"HYDROGEN_URL=http://localhost:${wiremock.server.port}/api/"})
+public class HydrogenWireMockTest {
 
     @Configuration
     public static class WebServiceClientConfig {
@@ -34,5 +36,4 @@ public class HydrogenWebServiceClientTest {
         String result = webServiceClient.getValue("Felix");
         assertThat(result, is("Felix"));
     }
-    
 }

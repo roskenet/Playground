@@ -17,8 +17,6 @@ public class HydrogenWebServiceClient implements WebServiceClient {
         this.restTemplate = restTemplateBuilder.build();
     }
 
-//    private RestTemplate restTemplate = new RestTemplate();
-
     private static class HydrogenResponse {
         private String elementName;
         private String elementValue;
