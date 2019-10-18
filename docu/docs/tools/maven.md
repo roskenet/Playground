@@ -1,3 +1,8 @@
+---
+Title:	Maven Cookbook
+Authors:	Felix Roske
+---
+
 # Maven 
 
 ## Add the maven wrapper

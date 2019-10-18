@@ -22,6 +22,9 @@ markdown_extensions:
 nav:
   - 'index.md'
   - 'about.md'
+  - Sessions:
+    - 1. Stunde: 'sessions/session_1.md'
+    - 2. Stunde: 'sessions/session_2.md'
   - Elements:
     - 'elements/Hydrogen.md'
     - 'elements/Oxygen.md'
@@ -29,6 +32,7 @@ nav:
     - 'tools/bash.md'
     - 'tools/python.md'
     - 'tools/minikube.md'
+    - 'tools/maven.md'
 
 extra:
   social:
