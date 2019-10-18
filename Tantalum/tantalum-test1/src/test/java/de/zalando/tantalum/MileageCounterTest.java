@@ -19,12 +19,12 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 // Mock the RestClient by providing a different bean in the application context: 
 @ExtendWith(SpringExtension.class) // used instead of @SpringBootTest to avoid the CommandLineRunner starting up.
 @ContextConfiguration(classes = {TantalumClientApplication.class,
-                                 TantalumClientTest.ClientTestConfig.class}, 
+                                 MileageCounterTest.TestClientConfig.class}, 
                       initializers = ConfigFileApplicationContextInitializer.class) 
-public class TantalumClientTest {
+public class MileageCounterTest {
 
     @TestConfiguration
-    public static class ClientTestConfig {
+    public static class TestClientConfig {
         @Bean
         public TantalumClient tantalumClient() {
             return new TantalumClient() {
