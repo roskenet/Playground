@@ -15,5 +15,5 @@ Bei umfangreicheren Projekten empfiehlt es sich übrigens, die zusätzliche Konf
 
 ## Mocks
 Möglichkeit Zwei: Benutze ein MockingTool
-Diese Möglichkeit ist sehr mit der ersten Möglichkeit verwandt und bietet sich häufig für umfangreichere Testszenarien an.
+Diese Möglichkeit ist sehr eng mit der ersten Möglichkeit verwandt und bietet sich häufig für umfangreichere Testszenarien an.
 Im Beispiel tantalum-test2 benutze ich Mockito um zum Beispiel zu überprüfen, ob der Client auch tatsächlich benutzt wurde.
