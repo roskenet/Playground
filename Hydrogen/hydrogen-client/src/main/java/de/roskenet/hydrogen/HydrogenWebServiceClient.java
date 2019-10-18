@@ -8,7 +8,7 @@ import org.springframework.web.client.RestTemplate;
 @Component
 public class HydrogenWebServiceClient implements WebServiceClient {
 
-    @Value("${HYDROGEN_URL:http://localhost:8080/api/}")
+    @Value("${hydrogen.url}")
     private String hydrogenUrl;
 
     private RestTemplate restTemplate;

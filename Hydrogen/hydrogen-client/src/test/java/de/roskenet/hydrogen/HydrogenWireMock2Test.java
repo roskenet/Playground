@@ -23,14 +23,14 @@ import org.springframework.test.context.junit4.SpringRunner;
 //instead of @SpringBootTest to avoid running the CommandLineRunners:
 @ContextConfiguration(classes = HydrogenClientApplication.class, 
     initializers = ConfigFileApplicationContextInitializer.class) 
-public class HydrogenWireMockTest {
+public class HydrogenWireMock2Test {
     
     @Autowired
     private WebServiceClient webServiceClient;
     
     @Test
     public void testGetValue() throws Exception {
-        String result = webServiceClient.getValue("Felix");
-        assertThat(result, is("Felix"));
+        String result = webServiceClient.getValue("Hello");
+        assertThat(result, is("Blubber"));
     }
 }
