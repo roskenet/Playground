@@ -18,6 +18,7 @@ markdown_extensions:
       linenums: true
   - footnotes
   - meta
+  - attr_list
 
 nav:
   - 'index.md'
@@ -28,6 +29,7 @@ nav:
   - Elements:
     - 'elements/Hydrogen.md'
     - 'elements/Oxygen.md'
+    - 'elements/Tantalum.md'
   - Tools:
     - 'tools/bash.md'
     - 'tools/python.md'
