@@ -7,4 +7,13 @@ Der tantalum-server ist ein Microservice, der uns unter /api/cars eine List der 
 
 Im tantulum-client entwickeln wir eine Klasse, die die Summe aller gefahrener Kilometer unserer Autos berechnet.
 
-1. Möglichkeit: Benutze das CDI-Framework um ein Mock-Objekt des Clients im App-Kontext zu haben.
+## CDI
+Möglichkeit Eins: Benutze das eingesetzte CDI-Framework (hier also Spring) um ein Mock-Objekt des Clients im App-Kontext zu haben.
+Im tantalum-test1 Projekt wird im ApplicationContext das ursprüngliche TantalumWebClient mit unserem Mock ersetzt. Das SpringFramework autowired nun im MileageCounter unseren 'Client' der nur die beiden hardcodierten Fahrzeuge zurückgibt.
+
+Bei umfangreicheren Projekten empfiehlt es sich übrigens, die zusätzliche Konfigurationsklasse zu externalisieren.
+
+## Mocks
+Möglichkeit Zwei: Benutze ein MockingTool
+Diese Möglichkeit ist sehr mit der ersten Möglichkeit verwandt und bietet sich häufig für umfangreichere Testszenarien an.
+Im Beispiel tantalum-test2 benutze ich Mockito um zum Beispiel zu überprüfen, ob der Client auch tatsächlich benutzt wurde.
