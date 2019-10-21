@@ -26,6 +26,8 @@ nav:
   - Sessions:
     - 1. Stunde: 'sessions/session_1.md'
     - 2. Stunde: 'sessions/session_2.md'
+    - 3. Stunde: 'sessions/session_3.md'
+    - 4. Stunde: 'sessions/session_4.md'
   - Elements:
     - 'elements/Hydrogen.md'
     - 'elements/Oxygen.md'
