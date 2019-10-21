@@ -5,9 +5,9 @@ metadata:
   namespace: oxygen
 spec:
   rules:
-  - host: oxygen.playground
+  - host: oxygen.minikube
     http:
       paths:
         - backend:
             serviceName: oxygen
-            servicePort: 8080
+            servicePort: 80
