@@ -2,3 +2,4 @@
 
 1. HelloWorld webservice
 
+2. Minikube example
