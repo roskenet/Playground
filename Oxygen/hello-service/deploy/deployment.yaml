@@ -3,21 +3,19 @@ kind: Deployment
 metadata:
   name: oxygen
   namespace: oxygen
-  labels:
-    application: oxygen
 spec:
   replicas: 3
   selector:
     matchLabels:
-      application: oxygen
+      app: oxygen
   template:
     metadata:
       labels:
-        application: oxygen
+        app: oxygen
     spec:
       containers:
       - name: oxygen
-        image: hello-service:1.0.0
+        image: roskenet/hello-service:0.0.1
         ports:
         - name: api
           containerPort: 8080

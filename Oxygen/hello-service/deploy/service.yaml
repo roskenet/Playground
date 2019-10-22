@@ -5,7 +5,7 @@ metadata:
   namespace: oxygen
 spec:
   selector:
-    application: oxygen
+    app: oxygen
   ports:
   - protocol: TCP
     port: 80

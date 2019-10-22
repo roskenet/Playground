@@ -18,6 +18,9 @@
 
     <properties>
         <java.version>11</java.version>
+        <docker.from>openjdk:11</docker.from>
+        <docker.maintainer>Felix Roske</docker.maintainer>
+        <docker.repo>roskenet</docker.repo>
     </properties>
 
     <dependencies>
@@ -43,6 +46,28 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>io.fabric8</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>0.31.0</version>
+                <configuration>
+                    <images>
+                        <image>
+                            <name>${docker.repo}/${project.name}:${project.version}</name>
+                            <build>
+                                <from>${docker.from}</from>
+                                <labels>
+                                    <maintainer>${docker.maintainer}</maintainer>
+                                </labels>
+                                <assembly>
+                                    <descriptorRef>artifact</descriptorRef>
+                                </assembly>
+                                <cmd>java -jar $JAVA_OPTS maven/${project.build.finalName}.jar</cmd>
+                            </build>
+                        </image>
+                    </images>
+                </configuration>
             </plugin>
         </plugins>
     </build>
