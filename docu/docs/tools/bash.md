@@ -18,3 +18,11 @@ do
    echo "$i"
 done
 ```
+
+## Read and strip file name components
+
+```bash
+filename=$(basename -- "$fullfile")
+extension="${filename##*.}"
+filename="${filename%.*}"
+```
