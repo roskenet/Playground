@@ -7,4 +7,4 @@ import typing
 
 def do_something(name: str) -> str: 
    print("Hello World") 
-   return 4
+   return "Hello"
