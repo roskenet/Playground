@@ -7,9 +7,7 @@ import org.springframework.boot.CommandLineRunner
 
 @SpringBootApplication
 class KotlinDemoApp : CommandLineRunner {
-    override fun run(vararg args: String): Unit {
-        println("Hello World")
-    }
+
 }
 
 fun main(args: Array<String>) {
