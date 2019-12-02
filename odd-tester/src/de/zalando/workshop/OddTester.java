@@ -9,6 +9,6 @@ public class OddTester {
         // Second version:
 //        return i % 2 != 0;
         // Smart version:
-        return (i & 1) != 0;
+       return (i & 1) != 0;
     }
 }
