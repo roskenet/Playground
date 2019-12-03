@@ -27,4 +27,10 @@ class Tests {
         
         assertThat(result.get('M'), is(1));
     }
+    
+    @Test
+    void testName() throws Exception {
+        
+    }
+    
 }
