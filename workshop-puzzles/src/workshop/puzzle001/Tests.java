@@ -2,6 +2,7 @@ package workshop.puzzle001;
 
 
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.nullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 import java.util.Map;
@@ -11,7 +12,7 @@ import org.junit.jupiter.api.Test;
 class Tests {
 
     @Test
-    void testCharCounter_i() {
+    void testCharCounter_i() throws Exception {
         var input = "Mississippi";
         
         Map<Character, Integer> result = CharCounter.countCharacters(input);
@@ -29,8 +30,12 @@ class Tests {
     }
     
     @Test
-    void testName() throws Exception {
-        
+    void testCharCounter_empty() throws Exception {
+       var input = "";
+       
+       Map<Character, Integer> result = CharCounter.countCharacters(input);
+       
+       assertThat(result.get('A'), is(nullValue()));
     }
     
 }
