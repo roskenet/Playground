@@ -1,6 +1,10 @@
 .metadata/
 .classpath
 .project
+.pydevproject
 .settings/
 target/
 site/
+bin/
+*.iml
+.idea/
