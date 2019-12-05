@@ -1,32 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Stock } from '../../model/stock';
 
 @Component({
   selector: 'flx-stock-item',
   templateUrl: './stock-item.component.html',
   styleUrls: ['./stock-item.component.scss']
 })
-export class StockItemComponent implements OnInit {
+export class StockItemComponent {
 
-  public name: string;
-  public code: string;
-  public price: number;
-  public previousPrice: number;
-  public positiveChange: boolean;
-  public favorite: boolean;
+  @Input()
+  public stocks: Array<Stock>;
+  @Output()
+  private toggleFavorite: EventEmitter<Stock>;
+  public stockClasses;
 
-  constructor() { }
-
-  ngOnInit() {
-    this.name = 'Test Stock Company';
-    this.code = 'TSC';
-    this.price = 75;
-    this.previousPrice = 80;
-    this.positiveChange = this.price >= this.previousPrice;
-    this.favorite = false;
+  constructor() { 
+    this.toggleFavorite = new EventEmitter<Stock>();
   }
 
-  toggleFavorite(event) {
-    console.log('We are toggling the favorite state for this stock');
-    this.favorite = !this.favorite;
+  trackStockByCode(index, stock) {
+    return stock.code;
+  }
+
+  onToggleFavorite(event, index) {
+    this.toggleFavorite.emit(this.stocks[index]);
   }
 }
