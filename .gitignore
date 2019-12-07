@@ -8,3 +8,4 @@ site/
 bin/
 *.iml
 .idea/
+.vscode/
