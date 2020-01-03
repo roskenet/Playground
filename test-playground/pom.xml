@@ -4,11 +4,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>de.felixroske.coding</groupId>
-  <artifactId>java-playground</artifactId>
+  <artifactId>test-playground</artifactId>
   <version>0.0.1</version>
   <packaging>jar</packaging>
 
-  <name>java-playground</name>
+  <name>test-playground</name>
   <url>http://maven.apache.org</url>
 
   <properties>
