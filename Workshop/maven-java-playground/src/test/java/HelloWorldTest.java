@@ -6,9 +6,9 @@ public class HelloWorldTest {
 
     @Test
     public void testDoSomething() {
-        String amazingString = "MyAmazingString";
+        final String amazingString = "MyAmazingString";
 
-        String result = HelloWorld.doSomething(amazingString);
+        final String result = HelloWorld.doSomething(amazingString);
 
         assertThat(result).isEqualTo("MYAMAZINGSTRING");
     }
