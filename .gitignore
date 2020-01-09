@@ -10,3 +10,4 @@ bin/
 *.iml
 .idea/
 .vscode/
+.attach_pid*
