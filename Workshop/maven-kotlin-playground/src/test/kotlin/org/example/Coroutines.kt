@@ -9,7 +9,7 @@ fun main() {
         delay(500)
 //        log.debug("World!")
         println("World!")
-    });
+    })
 //    log.debug("Hello,")
     println("Hello, ")
     Thread.sleep(1000L)
