@@ -1,5 +1,12 @@
 # Bash Cookbook
 
+## Special characters
+
+```$*``` and ```$@``` expand to the value of all positional parameters
+```$0``` the path to the running script OR the shell itself
+```$?``` exit code of last executed command
+```$_``` last argument
+
 ## Input a file line by line
 
 ```bash
