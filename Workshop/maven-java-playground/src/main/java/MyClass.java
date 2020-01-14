@@ -4,7 +4,6 @@ import java.util.Optional;
 
 public class MyClass {
 
-
     public static Map<Character, Integer> countChars(String input) {
 
         HashMap<Character, Integer> map = new HashMap<>();
