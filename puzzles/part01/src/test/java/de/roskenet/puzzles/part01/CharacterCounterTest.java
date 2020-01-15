@@ -8,13 +8,18 @@ import java.util.Map;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /*
+Task:
 Write a method that counts the characters in a string and stores them in a suitable data structure.
  */
-public class Solution01 {
+public class CharacterCounterTest {
 
     @Test
-    void testDoSomething() {
+    void testDoCount() {
+        final String input = "Mississippi";
 
+        var characterCount = CharacterCounter.doCount(input);
+
+        assertThat(characterCount.get('i')).isEqualTo(4);
     }
 
 }
