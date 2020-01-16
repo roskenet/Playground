@@ -1,1 +1,26 @@
-site_name: My Docs
+site_name: "Felix' Bookshelf"
+site_author: "Felix Roske"
+site_url: "http://www.felixroske.de/"
+
+theme:
+  name: "material"
+  feature:
+    tabs: true
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      linenums: true
+  - footnotes
+  - meta
+  - attr_list
+
+extra:
+  social:
+    - type: "github"
+      link: "https://github.com/roskenet"
+    - type: "twitter"
+      link: "https://twitter.com/felixroske"
+    - type: "facebook"
+      link: "https://www.facebook.com/felix.roske"
+

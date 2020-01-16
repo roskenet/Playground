@@ -1,6 +1,6 @@
-# Welcome to MkDocs
+# Welcome
 
-For full documentation visit [mkdocs.org](https://mkdocs.org).
+My notes on things I read.
 
 ## Commands
 
@@ -9,9 +9,3 @@ For full documentation visit [mkdocs.org](https://mkdocs.org).
 * `mkdocs build` - Build the documentation site.
 * `mkdocs help` - Print this help message.
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
