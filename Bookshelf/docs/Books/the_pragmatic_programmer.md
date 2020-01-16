@@ -37,3 +37,43 @@ Be aware of "feature bloat".
 [The early bird might get the worm, but what happens to the early worm?]
 
 Invest regularly.
+
+## Topic 7: Communicate! 
+
+A good idea is an orphan without effective communication.
+
+* Know what you want to say. 
+* Know your audience. 
+* Choose your moment. 
+* Choose a style. 
+* Make it look good. 
+* Involve your audience. 
+* Be a listener. 
+* Get back to people. 
+* Keep code and documentation together. 
+
+See:
+    The Mythical Man-Month: Essays on Software Engineering 
+    Peopleware: Productive Projects and Teams 
+    Dinosaur Brains: Dealing with All Those Impossible People at Work 
+
+## Topic 8: The Essence of Good Design 
+
+ETC principle: Easier to Change
+
+## Topic 9: DRY - The Evils of Duplication
+
+Maintenance is not only fixing bugs and enhancing features. Software and the developers should always be in maintenance mode.
+
+"Every piece of knowledge must have a single, unambiguous, authoritative representation within a system."
+
+Avoid duplication!
+
+Not All Code Duplication Is Knowledge Duplication: Example with validation of age and quantity of ordered items. 
+x > 0 is coincidently the same.
+
+DRY in data classes: point x, point y, (length z)
+
+Make it easy to reuse code!
+
+
