@@ -78,4 +78,16 @@ Make it easy to reuse code!
 
 Don’t rely on the properties of things you can’t control. 
 
+## Topic 10 Orthogonality
+
 Design your systems orthogonal.
+
+## Topic 11 Reversability
+
+## Topic 12 Tracer Bullets
+
+## Topic 13 Prototypes and Post-it Notes 
+
+## Topic 14 Domain Languages 
+
+## Topic 15 Estimating
