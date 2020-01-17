@@ -76,4 +76,6 @@ DRY in data classes: point x, point y, (length z)
 
 Make it easy to reuse code!
 
+Don’t rely on the properties of things you can’t control. 
 
+Design your systems orthogonal.

@@ -9,3 +9,11 @@ My notes on things I read.
 * `mkdocs build` - Build the documentation site.
 * `mkdocs help` - Print this help message.
 
+
+??? example "Some example code"
+
+```bash
+$ ls -la
+```
+
+

@@ -14,6 +14,13 @@ markdown_extensions:
   - footnotes
   - meta
   - attr_list
+  - smarty
+  - extra
+  - pymdownx.magiclink
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.mark
+  - footnotes
 
 extra:
   social:
