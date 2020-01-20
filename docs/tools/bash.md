@@ -10,11 +10,18 @@
 ## Input a file line by line
 
 ```bash
-input="./my_list.txt"
+INPUT="./my_list.txt"
 while IFS= read -r line
 do
   echo "$line"
-done < "$input"
+done < "$INPUT"
+```
+
+```bash
+while IFS= read -r line
+do  
+   : do something with "$line"
+done < FILENAME?
 ```
 
 ## Input a file line by line 2
