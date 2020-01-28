@@ -40,3 +40,7 @@ filename=$(basename -- "$fullfile")
 extension="${filename##*.}"
 filename="${filename%.*}"
 ```
+
+## Loops
+
+Get out of a loop with ```break```.
