@@ -4,6 +4,7 @@
 .pydevproject
 .settings/
 target/
+build/
 site/
 cache/
 bin/
@@ -12,4 +13,5 @@ bin/
 .vscode/
 .attach_pid*
 *.swp
+.gradle/
 stale_outputs_checked
