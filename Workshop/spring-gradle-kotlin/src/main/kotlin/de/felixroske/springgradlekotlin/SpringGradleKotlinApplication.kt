@@ -14,3 +14,11 @@ class SpringGradleKotlinApplication : CommandLineRunner {
 fun main(args: Array<String>) {
 	runApplication<SpringGradleKotlinApplication>(*args)
 }
+
+fun doSomething(arg: String) : String? {
+	return null
+}
+
+fun doSomething(arg: Int) : String? {
+	return ""
+}
