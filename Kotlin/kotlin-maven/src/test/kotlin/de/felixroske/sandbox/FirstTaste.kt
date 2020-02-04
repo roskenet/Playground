@@ -17,8 +17,11 @@ class FunWithFunctions {
         )
 
         val oldest = persons.maxBy { it.age ?: 0 }
+        val first = persons.first { it.name.startsWith("c", true) }
+
         println("The oldest Person is: $oldest")
 
+        assertThat(first?.name).isEqualTo("Charlie")
         assertThat(oldest?.age).isEqualTo(30)
     }
 }
