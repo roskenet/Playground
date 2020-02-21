@@ -13,22 +13,37 @@
   padding: 50px;
   background-color: #EEE;
 }
-#container h1 {
-  font-size: 144px;
-  font-family: sans-serif;
-  color: #0080A8;
-}
 </style>
 
 </head>
 
 <body>
 	<div id="container">
-        </div>
+  </div>
+
 <script type="text/babel">
 
+class HelloWorld extends React.Component {
+  render() {
+
+    var helloWorldStyle = {
+        fontSize: 26,
+        fontFamily: "sans-serif",
+        color: this.props.color
+    };
+
+    return(
+      <p style={helloWorldStyle}>Hello, {this.props.greetTarget}!</p>
+    );
+  }
+}
+
 ReactDOM.render(
-   <h1>Sherlock Holmes</h1>,
+   <div>
+      <h1>Sherlock Holmes</h1>
+      <HelloWorld color="#0080A8" greetTarget="World"/>
+      <HelloWorld color="#0040B8" greetTarget="in another color"/>
+   </div>,
    document.querySelector("#container")
    );
 
