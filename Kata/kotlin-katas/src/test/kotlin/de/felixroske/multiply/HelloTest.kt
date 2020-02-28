@@ -1,6 +1,5 @@
-package de.felixroske.multiply.multiply
+package de.felixroske.multiply
 
-import de.felixroske.multiply.multiply
 import junit.framework.Assert.assertEquals
 import org.junit.Test
 

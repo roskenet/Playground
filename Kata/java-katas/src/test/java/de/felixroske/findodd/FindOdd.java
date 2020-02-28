@@ -20,7 +20,6 @@ public class FindOdd {
                theOdd = key;
            }
         }
-
         return theOdd;
     }
 }

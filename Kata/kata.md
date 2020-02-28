@@ -51,3 +51,32 @@ Haskell: Nothing
 Python: None
 Julia: nothing
 
+# Who likes it?
+
+You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.
+
+Implement a function likes :: [String] -> String, which must take in input array, containing the names of people who like an item. It must return the display text as shown in the examples:
+
+```
+likes [] // must be "no one likes this"
+likes ["Peter"] // must be "Peter likes this"
+likes ["Jacob", "Alex"] // must be "Jacob and Alex like this"
+likes ["Max", "John", "Mark"] // must be "Max, John and Mark like this"
+likes ["Alex", "Jacob", "Mark", "Max"] // must be "Alex, Jacob and 2 others like this"
+```
+
+# Sum of odd numbers
+
+Given the triangle of consecutive odd numbers:
+
+             1
+          3     5
+       7     9    11
+   13    15    17    19
+21    23    25    27    29
+...
+
+Calculate the row sums of this triangle from the row index (starting at index 1) e.g.:
+
+rowSumOddNumbers(1); // 1
+rowSumOddNumbers(2); // 3 + 5 = 8
