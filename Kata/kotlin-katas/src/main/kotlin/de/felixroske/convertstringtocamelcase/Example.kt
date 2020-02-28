@@ -1,30 +1,22 @@
 package de.felixroske.convertstringtocamelcase
 
 fun main() {
-//    toCamelCase("the-stealth-warrior")
 
-    val list = listOf("the_stealth_warrior", "Zwei", "Drei", "Vier")
-    val regex = "(\\w*[-_]\\w*)".toRegex()
+    val myString = "the_stealth_warrior"
+    val regex = """[-_]\w""".toRegex()
 
-    list.forEach {
-        if(regex.matches(it)) {
-            println("$it matches")
-        }
+    val s = regex.replace(myString) {
+        it.value.get(1).toString().toUpperCase()
     }
 
+    println(s)
 }
 
-fun toCamelCase(str: String): String {
+fun toCamelCase(str: String):String {
+    val regex = """[-_]\w""".toRegex()
 
-    val regex = "(\\w*)(_|-(\\w)\\w*)*".toRegex()
-
-    val all = regex.findAll(str)
-
-    all.forEach {
-        println("${it.groupValues}")
+    val s = regex.replace(str) {
+        it.value.get(1).toString().toUpperCase()
     }
-
-    return ""
+   return s
 }
-
-
