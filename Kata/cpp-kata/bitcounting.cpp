@@ -1,18 +1,22 @@
 #include <iostream>
 
 unsigned int countBits(unsigned long long n){
-	std::cout << "Hier bin ich: " << 8*sizeof(int) << " Bits für int";
-	return 0;
-}
+	unsigned int count = 0;
+	int bitcount = 8*sizeof(unsigned long long);
 
-unsigned int doSomething(char x) {
-	auto y = 42ul;
-
-	return 0;
+	for(int x=0; x < bitcount; x += 1) {
+		unsigned long long pattern = 1UL << x;
+		if((n & pattern) == pattern) {
+			++count;
+		}
+	}
+	return count;
 }
 
 int main(int argc, char **argv) {
-	std::cout << "Hello World!";
-	countBits(42);
+	unsigned int count = countBits(42);
+
+	std::cout << "Hello! BitCount: " << count;
+
 	return 0;
 }
