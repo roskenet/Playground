@@ -7,6 +7,12 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+class Kata {
+    public static boolean divide(int number) {
+        return false;
+    }
+}
+
 public class SolutionTest {
     @Test
     public void basicTests() {
