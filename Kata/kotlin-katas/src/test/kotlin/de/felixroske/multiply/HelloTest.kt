@@ -11,7 +11,9 @@ internal class Multiplication_Test {
             val a = Math.random()
             val b = Math.random()
             val c = Math.random()
+
             val message = String.format("(%g * %g) * %g == %g * (%g * %g)", a, b, c, a, b, c)
+
             assertEquals(message,
                 multiply(multiply(a, b), c),
                 multiply(a, multiply(b, c)),
