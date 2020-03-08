@@ -7,8 +7,6 @@ import fractions
 
 cache = {}
 
-import fractions
-
 def coeff(n, k):
 
     if(2 * k > n):
