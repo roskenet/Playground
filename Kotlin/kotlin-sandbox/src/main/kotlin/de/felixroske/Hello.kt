@@ -10,6 +10,9 @@ class Hello(val name: String, var isMarried: Boolean) {
 fun main(args: Array<String>) {
     println("Hello, World")
 
+    val operator = "Hello" // This is o.k.: operator is a 'soft keyword'
+    val data = "My Data"
+
     val hello = Hello("Felix", false)
 
     hello.isMarried = false

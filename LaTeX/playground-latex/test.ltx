@@ -65,13 +65,13 @@ Ich möchte auch mal sehen, was passiert, wenn ich einen Text {\em hervorhebe}. 
 \begin{equation}
 f(x) = x^2 + 2x + 25
 \end{equation}
-{\sf Und dies ist nun ein Text in der Sans-Serif?}
+% \usefont{co de}{family}{st_br}{shape}
+{\usefont{LY1}{MyriadPro-onum-pnum}{c}{n}\selectfont Und dies ist nun ein Text in der Sans-Serif?}
 Warum zum Geier wird der Sans-Serif Font nicht richtig angezeigt? Das ist doch zum Mäusemelken, um jetzt endlich mal ein Umlaut zu bemühen! Auf jeden Fall scheint das ja wenigstens zu funktionieren.
 Und nun kommt ein Text, zu dem ich mal einen marginpar setzen möchte. Also zum Beispiel so:
 
-Lieber \marginpar{Dies soll nun in der Randspalte stehen.} vodafone-Kunde, Sie haben Ihr monatliches Online-Volumen aufgebraucht. Bitte wenden Sie sich an den nächsten vodafone-Shop.
+Lieber \marginpar{\sf {\fontseries{lsc} Hallo} Dies soll nun in der Randspalte stehen.} vodafone-Kunde, Sie haben Ihr monatliches Online-Volumen aufgebraucht. Bitte wenden Sie sich an den nächsten vodafone-Shop.
 \lstinputlisting[label=samplecode,caption=A sample]{./myclass.java}
-
 
 Auf wiederhören!
 \end{document}
