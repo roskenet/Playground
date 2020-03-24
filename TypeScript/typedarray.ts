@@ -18,3 +18,7 @@ laender.push({
 laender.forEach(function(value) {
   console.log(value);
 });
+
+function my_function(land: Bundesland): String {
+  return ""
+}
