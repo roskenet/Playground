@@ -1,8 +1,13 @@
 package de.felixroske
 
+import functionalkotlin.VeryBasic
+
 fun doSomething() {
    val mutableMap = mutableMapOf(1 to "Anna Konda", 2 to "Clara Fall")
 
+   mutableMap.forEach {
+      println(it)
+   }
 }
 
 class MyExtremlyFineClass {
@@ -19,6 +24,5 @@ class MyExtremlyFineClass {
 fun main() {
    MyExtremlyFineClass().withSets()
 }
-
 
 
