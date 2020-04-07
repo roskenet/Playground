@@ -5,8 +5,8 @@ import functionalkotlin.VeryBasic
 fun doSomething() {
     val mutableMap = mutableMapOf(1 to "Anna Konda", 2 to "Clara Fall")
 
-    mutableMap.forEach {
-        println(it)
+    mutableMap.forEach {(_, value) ->
+        println(value)
     }
 
     mutableMap.forEach { t, u -> println("$t ist $u") }
@@ -16,6 +16,7 @@ fun doSomething() {
 class MyExtremlyFineClass {
 
     fun withSets() {
+
         val set1 = setOf("A", "B")
         val set2 = setOf("B", "C")
 
