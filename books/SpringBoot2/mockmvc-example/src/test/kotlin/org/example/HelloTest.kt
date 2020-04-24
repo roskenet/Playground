@@ -12,14 +12,16 @@ import kotlin.test.assertEquals
 //@WebMvcTest
 class HelloTest {
 
-            @Autowired
-            val mockMvc: MockMvc? = null
+    @Autowired
+    val mockMvc: MockMvc? = null
 
-            @Test
-            fun helloWorldShouldWork() {
-                this.mockMvc?.perform(
-                    get("/hello").param("name", "World"))
-                    .andExpect(status().isOk())
-                    .andExpect(content().string("Hello, World\n"))
-            }
+    @Test
+    fun helloWorldShouldWork() {
+
+        this.mockMvc?.perform(
+            get("/hello").param("name", "World")
+        )
+            .andExpect(status().isOk())
+            .andExpect(content().string("Hello, World\n"))
+    }
 }
