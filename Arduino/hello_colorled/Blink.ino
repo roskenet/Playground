@@ -8,6 +8,9 @@ Color LED
 #define BLUE 11
 
 void setup() {
+//  pinMode(13, OUTPUT);
+//  digitalWrite(13, LOW);
+
   pinMode(RED, OUTPUT);
   pinMode(GREEN, OUTPUT);
   pinMode(BLUE, OUTPUT);
