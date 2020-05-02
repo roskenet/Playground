@@ -21,3 +21,4 @@ stale_outputs_checked
 *.log
 *.aux
 *.pdf
+node_modules
