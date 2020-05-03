@@ -26,12 +26,46 @@ var IndecisionApp = function (_React$Component) {
     _this.handleAddOption = _this.handleAddOption.bind(_this);
     _this.handleDeleteOption = _this.handleDeleteOption.bind(_this);
     _this.state = {
-      options: props.options
+      options: []
     };
     return _this;
   }
 
   _createClass(IndecisionApp, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      try {
+        var json = localStorage.getItem('options');
+        var options = JSON.parse(json);
+
+        if (options) {
+          this.setState(function () {
+            return { options: options };
+          });
+        }
+
+        console.log('fetching data');
+      } catch (e) {
+        // Do nothing!
+      }
+    }
+  }, {
+    key: 'componentDidUpdate',
+    value: function componentDidUpdate(prevProps, prevState) {
+      if (prevState.options.length !== this.state.options.length) {
+
+        var json = JSON.stringify(this.state.options);
+        localStorage.setItem('options', json);
+
+        console.log('saving data');
+      }
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      console.log('Component will unmount!');
+    }
+  }, {
     key: 'handleDeleteOptions',
     value: function handleDeleteOptions() {
       // this.setState(() => {
@@ -81,7 +115,7 @@ var IndecisionApp = function (_React$Component) {
     key: 'render',
     value: function render() {
       var title = 'Indecision';
-      var subtitle = 'Put your life in the hands of a computer';
+      var subtitle = 'Put your life in the hands of a computer!';
 
       return React.createElement(
         'div',
@@ -104,9 +138,9 @@ var IndecisionApp = function (_React$Component) {
   return IndecisionApp;
 }(React.Component);
 
-IndecisionApp.defaultProps = {
-  options: []
-};
+// IndecisionApp.defaultProps = {
+//   options: []
+// };
 
 var Header = function Header(props) {
   return React.createElement(
@@ -178,6 +212,11 @@ var Options = function Options(props) {
       { onClick: props.handleDeleteOptions },
       'Remove all!'
     ),
+    props.options.length === 0 && React.createElement(
+      'p',
+      null,
+      'Please add an option to get started!'
+    ),
     props.options.map(function (option) {
       return React.createElement(Option, {
         key: option,
@@ -233,6 +272,10 @@ var AddOption = function (_React$Component2) {
       this.setState(function () {
         return { error: error };
       });
+
+      if (!error) {
+        e.target.elements.optionText.value = '';
+      }
     }
   }, {
     key: 'render',
