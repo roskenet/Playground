@@ -13,6 +13,11 @@ export const sortByDate = () => ({
     value: 'date'
 });
 
+export const setSortBy = (sortBy) => ({
+    type: 'SORT_BY',
+    value: sortBy
+});
+
 export const setStartDate = ( date ) => ({ 
     type: 'SET_START_DATE',
     date
