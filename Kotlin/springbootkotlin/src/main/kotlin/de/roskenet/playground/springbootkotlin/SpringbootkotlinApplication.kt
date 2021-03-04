@@ -17,6 +17,7 @@ class SpringbootkotlinApplication(val theWorker: Usable): CommandLineRunner {
 }
 
 fun main(args: Array<String>) {
+
 	val last = 42
 
 	for (x in 1..last) {

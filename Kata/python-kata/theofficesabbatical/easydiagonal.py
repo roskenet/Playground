@@ -22,6 +22,7 @@ def coeff(n, k):
         result = result * temp
 
     result = fractions.Fraction(1)
+
     for i in range(1, k+1):
         result = result * fractions.Fraction((n - k + i),i)
     

@@ -1,11 +1,19 @@
 import React from 'react';
 import moment from 'moment';
 import { SingleDatePicker } from 'react-dates';
+<<<<<<< HEAD
 
 // const date = new Date();
 
 // const now = moment();
 // console.log(now.format('MMM Do, YYYY'));
+=======
+import 'react-dates/lib/css/_datepicker.css';
+// const date = new Date();
+
+const now = moment();
+console.log(now.format('MMM Do, YYYY'));
+>>>>>>> elements/master
 
 class ExpenseForm extends React.Component {
     constructor(props) {
@@ -31,11 +39,16 @@ class ExpenseForm extends React.Component {
         this.setState(() => ({ note }));
     };
 
+<<<<<<< HEAD
     onAmountChange = (e) => {
+=======
+   onAmountChange = (e) => {
+>>>>>>> elements/master
         const amount = e.target.value;
         if (!amount || amount.match(/^\d{1,}(\.\d{0,2})?$/)) {
             this.setState(() => ({ amount }));
         }
+<<<<<<< HEAD
     };
 
     onDateChange = (createdAt) => {
@@ -65,11 +78,43 @@ class ExpenseForm extends React.Component {
         }
 
     };
+=======
+   };
+   
+   onDateChange = (createdAt) => {
+       if(createdAt) {
+        this.setState(() => ({createdAt}));
+       }
+   };
+
+   onFocusChange = ({focused}) => {
+       this.setState(() => ({calendarFocused: focused}));
+   };
+   onSubmit = (e) => {
+    e.preventDefault();
+
+    if(!this.state.description || !this.state.amount) {
+
+        // this.state.errorMessage = true;
+        this.setState(() => ({ errorState: 'Please provide description and amount.'}));
+    } else {
+        this.setState(() => ({errorState: ''}));
+        this.props.onSubmit({
+            description: this.state.description,
+            amount: parseFloat(this.state.amount, 10) * 100,
+            createdAt: this.state.createdAt.valueOf(),
+            note: this.state.note
+        });
+    }
+
+   };
+>>>>>>> elements/master
     render() {
         return (
             <div>
                 {this.state.errorState && <p>{this.state.errorState}</p>}
                 <form onSubmit={this.onSubmit}>
+<<<<<<< HEAD
                     <input
                         type="text"
                         placeholder="Description"
@@ -77,11 +122,21 @@ class ExpenseForm extends React.Component {
                         value={this.state.description}
                         onChange={this.onDescriptionChange}
                     />
+=======
+                    <input 
+                        type="text"
+                        placeholder="Description"
+                        autoFocus 
+                        value={this.state.description}
+                        onChange={this.onDescriptionChange}
+                        />
+>>>>>>> elements/master
                     <input
                         type="text"
                         placeholder="Amount"
                         value={this.state.amount}
                         onChange={this.onAmountChange} />
+<<<<<<< HEAD
                     <SingleDatePicker
                         date={this.state.createdAt}
                         onDateChange={this.onDateChange}
@@ -94,6 +149,20 @@ class ExpenseForm extends React.Component {
                         placeholder="Add a note for your expense (optional)"
                         onChange={this.onNoteChange}
                         value={this.state.note}>
+=======
+                        <SingleDatePicker 
+                            date={this.state.createdAt}
+                            onDateChange={this.onDateChange}
+                            focused={this.state.calendarFocused}
+                            onFocusChange={this.onFocusChange}
+                            numberOfMonths={1}
+                            isOutsideRange={() => false }
+                        />
+                    <textarea
+                    placeholder="Add a note for your expense (optional)"
+                    onChange={this.onNoteChange}
+                    value={this.state.note}>
+>>>>>>> elements/master
                     </textarea>
                     <button>Add Expense</button>
                 </form>

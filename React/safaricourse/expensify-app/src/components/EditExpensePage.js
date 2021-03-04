@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import ExpenseForm from './ExpenseForm';
 import { editExpense, removeExpense } from '../actions/expenses';
 
+<<<<<<< HEAD
 
 // part II
 // three
@@ -36,6 +37,31 @@ export class EditExpensePage extends React.Component {
         );
     }
 }
+=======
+const EditExpensePage = (props) => {
+    return (
+        <div>
+            <ExpenseForm
+                expense={props.expense}
+                onSubmit={(expense) => {
+                    // Dispatch the action to edit the expense
+                    // Redirect to the dashboard
+                    props.dispatch(editExpense(props.expense.id, expense));
+                    props.history.push('/');
+                    console.log('updated', expense);
+                }}
+            />
+            <button 
+                onClick={(expense) => {
+                    props.dispatch(removeExpense({ id: props.expense.id }));
+                    props.history.push('/');
+                    }
+                }
+            >Remove me!</button>
+        </div>
+    )
+};
+>>>>>>> elements/master
 
 const mapStateToProps = (state, props) => {
     return {
@@ -43,9 +69,13 @@ const mapStateToProps = (state, props) => {
     };
 };
 
+<<<<<<< HEAD
 const mapDispatchToProps = (dispatch, props) => ({
     editExpense: (id, expense) => dispatch(editExpense(id, expense)),
     removeExpense: (expense) => dispatch(removeExpense(expense))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(EditExpensePage);
+=======
+export default connect(mapStateToProps)(EditExpensePage);
+>>>>>>> elements/master

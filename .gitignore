@@ -53,9 +53,6 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-### VS Code ###
-.vscode/
-
 .metadata/
 .classpath
 .project
@@ -82,15 +79,6 @@ stale_outputs_checked
 *.aux
 *.pdf
 node_modules
-
-# Compiled class file
-*.class
-
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/

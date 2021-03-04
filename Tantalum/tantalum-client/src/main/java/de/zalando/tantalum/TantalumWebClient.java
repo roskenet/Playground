@@ -1,5 +1,6 @@
 package de.zalando.tantalum;
 
+<<<<<<< HEAD
 import static org.springframework.http.HttpStatus.Series.SUCCESSFUL;
 import static org.zalando.riptide.Bindings.on;
 import static org.zalando.riptide.Navigators.contentType;
@@ -29,10 +30,21 @@ import org.springframework.web.client.RestTemplate;
 import org.zalando.riptide.Http;
 import org.zalando.riptide.OriginalStackTracePlugin;
 import org.zalando.riptide.capture.Capture;
+=======
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
+import org.springframework.web.client.RestTemplate;
+>>>>>>> elements/master
 
 @Component
 public class TantalumWebClient implements TantalumClient {
 
+<<<<<<< HEAD
 //    @Value("${tantalum.url:http://localhost:8080}")
 //    private String tantalumUrl;
     
@@ -68,5 +80,25 @@ public class TantalumWebClient implements TantalumClient {
 //                                users.forEach(System.out::println)));
 
         return Arrays.asList(cars);
+=======
+    @Value("${tantalum.url:http://localhost:8080}")
+    private String tantalumUrl;
+    
+    private RestTemplate restTemplate;
+    
+    public TantalumWebClient(RestTemplate restTemplate) {
+        this.restTemplate = restTemplate;
+    }
+    
+    @Override
+    public List<Car> getAllCars() {
+        ResponseEntity<List<Car>> carsResponse = 
+                restTemplate.exchange(tantalumUrl + "/api/cars", 
+                                      HttpMethod.GET,
+                                      null,
+                                      new ParameterizedTypeReference<List<Car>>() {});
+        
+        return carsResponse.getBody();
+>>>>>>> elements/master
     }
 }
